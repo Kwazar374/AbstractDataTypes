@@ -130,14 +130,14 @@ public:
     }
 
     friend std::ostream& operator<<(std::ostream& os, const QueueArrayRepresentation<T>& queue) {
-        os << "[";
+        os << static_cast<std::string>("[");
         if (!queue.IsEmpty()) {
             for (size_t i = queue.front; i < queue.back - 1; ++i) {
                 os << queue.array[i] << " ";
             }
-            os << queue.array[back-1];
+            os << queue.array[queue.back-1];
         }
-        os << "]";
+        os << static_cast<std::string>("]");
         return os;
     }
 };
