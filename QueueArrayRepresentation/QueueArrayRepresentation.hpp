@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include <stdexcept>
+#include <iostream>
 
 template <typename T>
 class QueueArrayRepresentation
@@ -130,14 +131,14 @@ public:
     }
 
     friend std::ostream& operator<<(std::ostream& os, const QueueArrayRepresentation<T>& queue) {
-        os << static_cast<std::string>("[");
+        os << "[";
         if (!queue.IsEmpty()) {
             for (size_t i = queue.front; i < queue.back - 1; ++i) {
                 os << queue.array[i] << " ";
             }
             os << queue.array[queue.back-1];
         }
-        os << static_cast<std::string>("]");
+        os << "]";
         return os;
     }
 };

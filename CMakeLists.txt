@@ -1,18 +1,23 @@
+# How to use Google Tests with CMake:
+# https://google.github.io/googletest/quickstart-cmake.html
+
 cmake_minimum_required(VERSION 3.23)
 project(AbstractDataTypes)
 
 set(CMAKE_CXX_VERSION 20)
-set(CMAKE_CXX_VERSION_REQUIRED true)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
-
 FetchContent_Declare(
     gtest
     GIT_REPOSITORY https://github.com/google/googletest.git
     GIT_TAG v1.15.2
 )
-
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(gtest)
+
+enable_testing()
 
 add_subdirectory(QueueArrayRepresentation)
 
