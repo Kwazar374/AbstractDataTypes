@@ -1,0 +1,1 @@
+-IC:/DEV/REPOS/AbstractDataTypes/src -I"C:/DEV/REPOS/AbstractDataTypes/build/_deps/googletest-src/googlemock/include" -I"C:/DEV/REPOS/AbstractDataTypes/build/_deps/googletest-src/googlemock" -isystem "C:/DEV/REPOS/AbstractDataTypes/build/_deps/googletest-src/googletest/include" -isystem "C:/DEV/REPOS/AbstractDataTypes/build/_deps/googletest-src/googletest"
