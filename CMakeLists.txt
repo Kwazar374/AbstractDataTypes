@@ -2,7 +2,7 @@
 # https://google.github.io/googletest/quickstart-cmake.html
 
 cmake_minimum_required(VERSION 3.23)
-project(AbstractDataTypes)
+project(DataStructures)
 
 set(CMAKE_CXX_VERSION 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -18,6 +18,8 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(gtest)
 
 enable_testing()
+
+set(CTEST_DROP_METHOD "none") # disappear missing dart file warning 
 
 add_subdirectory(QueueArrayRepresentation)
 
