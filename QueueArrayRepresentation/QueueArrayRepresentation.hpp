@@ -134,7 +134,7 @@ public:
         os << "[";
         if (!queue.IsEmpty()) {
             for (size_t i = queue.front; i < queue.back - 1; ++i) {
-                os << queue.array[i] << " ";
+                os << queue.array[i] << "; ";
             }
             os << queue.array[queue.back-1];
         }
