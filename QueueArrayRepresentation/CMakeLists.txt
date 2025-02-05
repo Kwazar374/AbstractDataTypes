@@ -19,5 +19,14 @@ target_link_libraries(
     GTest::gtest_main
 )
 
+add_executable(
+    QueueArrayRepresentationExample
+    QueueArrayRepresentationExample.cpp
+)
+target_link_libraries(
+    QueueArrayRepresentationExample
+    ${PROJECT_NAME}-QueueArrayRepresentation
+)
+
 include(GoogleTest)
 gtest_discover_tests(QueueArrayRepresentationTest)
